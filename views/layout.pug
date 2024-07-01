@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width,initial-scale=1.0')
+    meta(charset='utf-8')
+    title= title + " | Lazaro"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block nav
+      div(class='nav')
+        ul(class='nav-list')
+          li(class='nav-item')
+            a(href='/')="Home"
+          li(class='nav-item')
+            a(href='/users')="Users"
+          li(class='nav-item')
+            a(href='/chat')="Chats"
+
+    block content
+
+    block scripts
+    script(src='/javascript/main.js', type='module')

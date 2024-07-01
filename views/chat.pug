@@ -1,0 +1,38 @@
+extends layout
+
+
+block content
+    div(class='container')
+        if chats
+            div(class='chat-view')
+                div(class='room-header')
+                    div(class='room-pic')
+                        img(src='' alt='room logo')
+                    div(class='room-title')
+                        div(class='room-name')
+                            h4=room.name || "Room Name"
+                        div(class='room-status')
+                            b
+                                i=room.status || "offline"
+
+            div(class='messages')
+                div(class='received')
+                    div=room.received || "Received message"
+                    div(class='time time-received')="Wed 13.00pm"
+                div(class='sent')
+                    div=room.sent || "Sent message"
+                    div(class='time time-sent')="Wed 13.00pm"
+        else
+            div(class='public-rooms')
+                ul(class='rooms-list')
+                    for room in public
+                        li(class='on-room-clicked')
+                            div(class='public-room-header')
+                                div(class='public-room-pic')
+                                    img(src='' alt='public-room logo')
+                                div(class='public-room-title')
+                                    div(class='public-room-name')
+                                        h4=room.name || "Room Name"
+                                    div(class='public-room-status')
+                                        b
+                                            i=room.status || "offline"

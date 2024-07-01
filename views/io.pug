@@ -1,0 +1,17 @@
+extends  layout
+
+block content
+    div(id='room-selection-container' class='centered')
+        h1="WebRTC Video Conference"
+        label="Enter the number of the room you want to connect"
+        input(id='room-input' type='text')
+        button(id='connect-button')="CONNECT"
+
+    div(id='video-chat-container' class='video-position' style='display: none')
+        video(id='local-video' autoplay='autoplay')
+        video(id='remote-video' autoplay='autoplay')
+
+block scripts
+    script(src='/socket.io/socket.io.js')
+    script=`const server = io()`
+    script(src='/javascript/client.js', type='module')

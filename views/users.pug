@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h2="Users List"
+    table
+        thead
+            tr
+                td="No."
+                td="Name"
+        tbody
+            for user in users
+                tr
+                    td=user.id
+                    td
+                        a(href=`/users/${user.fname} ${user.lname}`)=`${user.fname} ${user.lname}`

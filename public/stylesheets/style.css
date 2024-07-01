@@ -1,0 +1,17 @@
+@import "globals.css";
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table{
+  border-collapse: separate;
+  border-width: 1px 1px 1px 1px;
+  border-spacing: 0;
+  width: max-content;
+}
