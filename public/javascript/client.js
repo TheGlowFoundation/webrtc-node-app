@@ -159,7 +159,7 @@ function addLocalTracks(rtcPeerConnection) {
 async function createOffer(rtcPeerConnection){
     try {
         const sessionDescription = await rtcPeerConnection.createOffer()
-        rtcPeerConnection.setLocalDescription(sessionDescription)
+        await rtcPeerConnection.setLocalDescription(sessionDescription)
 
         socket.emit('webrtc_offer', {
             type: 'webrtc_offer',
@@ -175,7 +175,7 @@ async function createOffer(rtcPeerConnection){
 async function createAnswer(rtcPeerConnection){
     try {
         const sessionDescription = await rtcPeerConnection.createAnswer()
-        rtcPeerConnection.setLocalDescription(sessionDescription)
+        await rtcPeerConnection.setLocalDescription(sessionDescription)
 
         socket.emit('webrtc_answer', {
             type: 'webrtc_answer',

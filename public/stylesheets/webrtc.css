@@ -1,0 +1,32 @@
+
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-position {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#video-chat-container {
+    width: 100%;
+    background-color: #616161;
+}
+
+#local-video {
+    position: absolute;
+    top: 30%;
+    width: 30%;
+    left: 0;
+    bottom: 0;
+}
+
+#remote-video {
+    height: 100%;
+    width: 100%;
+}
