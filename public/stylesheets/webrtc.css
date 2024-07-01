@@ -20,7 +20,7 @@
 
 #local-video {
     position: absolute;
-    top: 30%;
+    top: 50%;
     width: 30%;
     left: 0;
     bottom: 0;
@@ -28,5 +28,19 @@
 
 #remote-video {
     height: 100%;
-    width: 100%;
+    width: auto;
+}
+
+@media screen and (max-width: 366px) {
+    #local-video {
+        top: 50%;
+        width: 100%;
+        height: auto;
+    }
+
+    #remote-video {
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
 }
